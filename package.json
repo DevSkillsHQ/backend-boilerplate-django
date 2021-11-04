@@ -1,13 +1,9 @@
 {
-  "name": "account-management-fullstack-level-3",
+  "name": "fullstack-boilerplate-django",
   "version": "0.0.1",
   "scripts": {
-    "build:backend": "cd app-backend && pip3 install -r requirements.txt && python3 manage.py migrate",
-    "build:frontend": "cd app-frontend && npm install && npm run build",
-    "build": "npm run build:backend & npm run build:frontend",
-    "start:backend": "cd app-backend && python3 manage.py runserver",
-    "start:frontend": "cd app-frontend &&  npm run start",
-    "start": "npm run start:backend & npm run start:frontend",
+    "build": "cd app && pip3 install -r requirements.txt && python3 manage.py migrate",
+    "start": "cd app && python3 manage.py runserver",
     "test": "cypress run"
   },
   "devDependencies": {
