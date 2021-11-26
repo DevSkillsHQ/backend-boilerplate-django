@@ -1,4 +1,4 @@
-# Fullstack Boilerplate Django/React
+# Backend Boilerplate Django
 
 A backbone for your coding challenge.
 
