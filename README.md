@@ -4,8 +4,7 @@ A backbone for your coding challenge.
 
 ## Contents
 
-- [Backend service](app-backend) - a Django service with a `/ping` endpoint.
-- [Frontend app](app-frontend) - a React/NextJS app.
+- [Backend service](app) - a Django service with a `/ping` endpoint.
 - [E2E test suites](cypress/integration) - a backend and a frontend Cypress test suites. Extend with your tests.
 - [Pipeline](.github/workflows/tests.yml) - a test Runner that executes the Cypress tests on push to a branch other than `master`/`main`.
 
@@ -19,16 +18,6 @@ A backbone for your coding challenge.
 
 - sqlite3 (SQLite connection)
 - django-cors-headers (CORS support)
-
-### Frontend
-
-- Next 10
-- React 17
-
-#### Additional libs
-
-- tailwindcss 2 (css)
-- DOM/React Testing Library / Jest (testing)
 
 ### Misc
 
