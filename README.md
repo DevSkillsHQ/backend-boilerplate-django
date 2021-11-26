@@ -34,18 +34,14 @@ A backbone for your coding challenge.
 
 ```bash
 npm install
-npm run build # both Django backend and Next frontend
-npm run build:backend # only Django backend
-npm run build:frontend # only Next frontend
+npm run build # both Django backend
 ```
 
 4. Start your app.
 
 ```bash
 npm install
-npm run start # both Django backend and Next frontend
-npm run start:backend # only Django backend
-npm run start:frontend # only Next frontend
+npm run start # both Django backend
 ```
 
 5. Run the Cypress tests.
