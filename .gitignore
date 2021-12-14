@@ -4,3 +4,4 @@ cypress/support
 cypress/videos
 .idea
 app-backend/app/__pycache__/
+.vscode/

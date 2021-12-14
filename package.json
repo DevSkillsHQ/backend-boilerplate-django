@@ -1,6 +1,9 @@
 {
   "name": "fullstack-boilerplate-django",
   "version": "0.0.1",
+  "virtualenv": {
+    "python": "/venv/scripts/"
+  },
   "scripts": {
     "build": "cd app && pip3 install -r requirements.txt && python3 manage.py migrate",
     "start": "cd app && python3 manage.py runserver",
@@ -8,5 +11,8 @@
   },
   "devDependencies": {
     "cypress": "^8.6.0"
+  },
+  "dependencies": {
+    "run": "^1.4.0"
   }
 }
