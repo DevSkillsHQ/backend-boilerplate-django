@@ -14,20 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.views.generic.base import RedirectView
-
-
 from django.contrib import admin
 from django.urls import path
 from . import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('ping', views.ping, name='ping'),
-    path('presentations/<str:pk>/polls', views.polls, name='polls'),
-    path('templates', views.templates, name='templates'),
-    path('presentations', views.presentations, name='presentations'),
-    path('ping', RedirectView.as_view(url='https://infra.devskills.app/api/interactive-presentation/ping', permanent=True), name='ping'),
-    #path('templates', RedirectView.as_view(url='https://infra.devskills.app/api/interactive-presentation/templates', permanent=True), name='ping'),
-    #path('presentations', RedirectView.as_view(url='https://infra.devskills.app/api/interactive-presentation/presentations', permanent=True), name='ping'),
+    path('ping', views.ping),
+    path('templates', views.templates),
+    path('presentations', views.presentations),
+    path('presentations/<str:pk>/polls', views.polls),
+    path('presentations/<str:pk>/polls/<str:poll_id>', views.polls),
+    path('presentations/<str:pk>/polls/<str:poll_id>/votes', views.votes),
 ]

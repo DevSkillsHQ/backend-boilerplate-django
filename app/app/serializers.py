@@ -1,5 +1,6 @@
 from django.db import transaction
 from django.db.models import F
+from django.db.models.aggregates import Count
 from rest_framework import serializers
 from .models import Poll, Option, Presentation, Question, Template, Vote
 
@@ -31,9 +32,10 @@ class PollSerializer(serializers.ModelSerializer):
     votes = serializers.SerializerMethodField(method_name='count_votes')
 
     def count_votes(self, poll: Poll):
-        votes = Vote.objects \
-            .select_related('selected_option_key') \
-            .filter(selected_option_key__question_id=poll.question_id)
+        votes = Option.objects \
+            .filter(question_id=poll.question_id) \
+            .annotate(count=Count('vote')) \
+            .values('key', 'count')
         return list(votes)
 
 
