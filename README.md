@@ -12,7 +12,7 @@ A backbone for your coding challenge.
 
 ### Backend
 
-- Django 3.1.5
+- Django 4.1.4
 
 #### Additional libs
 
