@@ -6,4 +6,4 @@ updates:
       interval: "daily"
     labels:
       - "python"
-      - "dependencies
+      - "dependencies"
